@@ -4,7 +4,7 @@ import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import { db } from "@/firebase/firebaseConfig";
+
 import { useEffect } from "react";
 import { Link } from "expo-router";
 
