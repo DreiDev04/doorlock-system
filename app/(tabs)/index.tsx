@@ -1,26 +1,21 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Image } from "react-native";
 import React from "react";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-
-import { useEffect } from "react";
-import { Link } from "expo-router";
-
 const index = () => {
-
   return (
-    <SafeAreaView>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText>asd</ThemedText>
+    <SafeAreaView style={{ flex: 1 }}>
+      <ThemedView style={styles.header}>
+        <ThemedText style={styles.headerText}>Door Lock App</ThemedText>
       </ThemedView>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText>
-          <Link href="/login">
-            <ThemedText>Login</ThemedText>
-          </Link>
-        </ThemedText>
+      <ThemedView style={styles.content}>
+        <Image
+          source={require("@/assets/icons/locked.png")}
+          style={styles.lockIcon}
+        />
+        <ThemedText style={styles.statusText}>Door is Locked</ThemedText>
       </ThemedView>
     </SafeAreaView>
   );
@@ -29,8 +24,30 @@ const index = () => {
 export default index;
 
 const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: "column",
-    gap: 8,
+  header: {
+    backgroundColor: "#2563EB",
+    paddingVertical: 20,
+  },
+  headerText: {
+    color: "#FFFFFF",
+    fontSize: 24,
+    fontWeight: "bold",
+    textAlign: "center",
+  },
+  content: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 20,
+  },
+  lockIcon: {
+    width: 150,
+    height: 150,
+    marginBottom: 20,
+  },
+  statusText: {
+    fontSize: 20,
+    fontWeight: "600",
+    marginTop: 16,
   },
 });
