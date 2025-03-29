@@ -4,33 +4,21 @@ import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-import { db } from "@/firebase/firebaseConfig";
-import { useEffect } from "react";
-import { Link } from "expo-router";
-
-const index = () => {
-
+const settings = () => {
   return (
     <SafeAreaView>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText>asd</ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText>
-          <Link href="/login">
-            <ThemedText>Login</ThemedText>
-          </Link>
-        </ThemedText>
+        <ThemedText>index</ThemedText>
       </ThemedView>
     </SafeAreaView>
   );
 };
 
-export default index;
+export default settings;
 
 const styles = StyleSheet.create({
   titleContainer: {
-    flexDirection: "column",
+    flexDirection: "row",
     gap: 8,
   },
 });
