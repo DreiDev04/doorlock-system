@@ -34,15 +34,14 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-      <SafeAreaProvider>
+        <SafeAreaProvider>
         <Stack>
-          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-         
-          
-          <Stack.Screen name="+not-found" />
-        </Stack>
-        <StatusBar style="auto" />
-      </SafeAreaProvider>
+            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+
+            <Stack.Screen name="+not-found" />
+          </Stack>
+          <StatusBar style="auto" />
+        </SafeAreaProvider>
     </ThemeProvider>
   );
 }
