@@ -4,6 +4,10 @@ import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+import { db } from "@/firebase/firebaseConfg";
+import { useEffect } from "react";
+import { Link } from "expo-router";
+
 const index = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
