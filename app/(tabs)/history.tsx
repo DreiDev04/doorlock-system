@@ -11,10 +11,7 @@ import { Link } from "expo-router";
 const history = () => {
 
   return (
-    <SafeAreaView>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText>History</ThemedText>
-      </ThemedView>
+    <View>
       <ThemedView style={styles.titleContainer}>
         <ThemedText>
           <Link href="/login">
@@ -29,7 +26,7 @@ const history = () => {
           </Link>
         </ThemedText>
       </ThemedView>
-    </SafeAreaView>
+    </View>
   );
 };
 

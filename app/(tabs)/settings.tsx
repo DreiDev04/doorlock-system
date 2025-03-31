@@ -18,11 +18,7 @@ const Settings = () => {
   }, []);
 
   return (
-    <SafeAreaView>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText style={styles.title}>Settings</ThemedText>
-      </ThemedView>
-
+    <View>
       <ThemedView style={styles.userInfo}>
         {user ? (
           <>
@@ -39,7 +35,7 @@ const Settings = () => {
           <ThemedText>No user signed in</ThemedText>
         )}
       </ThemedView>
-    </SafeAreaView>
+    </View>
   );
 };
 
@@ -59,6 +55,5 @@ const styles = StyleSheet.create({
     padding: 20,
     borderRadius: 10,
     marginHorizontal: 20,
-    marginTop: 10,
   },
 });
