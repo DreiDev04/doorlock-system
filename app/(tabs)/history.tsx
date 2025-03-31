@@ -7,8 +7,11 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { db } from "@/firebase/firebaseConfg";
 import { useEffect } from "react";
 import { Link } from "expo-router";
+import { useAuth } from "@/context/AuthContext";
+
 
 const history = () => {
+  const { user } = useAuth();
 
   return (
     <View>
@@ -25,6 +28,7 @@ const history = () => {
             <ThemedText>Register</ThemedText>
           </Link>
         </ThemedText>
+        {user ? <ThemedText >Welcome, {user.email}!</ThemedText> : <ThemedText>Please sign in.</ThemedText>}
       </ThemedView>
     </View>
   );
